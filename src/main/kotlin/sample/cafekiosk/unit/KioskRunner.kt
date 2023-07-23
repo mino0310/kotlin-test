@@ -1,6 +1,7 @@
 package sample.cafekiosk.unit
 
-import java.util.Arrays
+import sample.cafekiosk.unit.beverage.Americano
+import sample.cafekiosk.unit.beverage.Latte
 
 class KioskRunner
 
@@ -10,5 +11,6 @@ fun main(args: Array<String>) {
     cafeKiosk.add(Latte())
     val totalPrice = cafeKiosk.getTotalPrice()
     println("총 주문가격 = $totalPrice")
+
 }
 
