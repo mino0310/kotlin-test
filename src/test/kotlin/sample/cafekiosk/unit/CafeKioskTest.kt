@@ -3,6 +3,7 @@ package sample.cafekiosk.unit
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import sample.cafekiosk.unit.beverage.Americano
 import sample.cafekiosk.unit.beverage.Beverage
@@ -12,6 +13,7 @@ import java.time.LocalDateTime
 class CafeKioskTest {
 
     @Test
+    @DisplayName("음료 1개를 추가하면 주문 목록에 담긴다")
     fun add() {
 
         val cafeKiosk = CafeKiosk()
@@ -19,6 +21,8 @@ class CafeKioskTest {
 
         println("음료 수: ${cafeKiosk.beverages.size}")
         println("음료 이름: ${cafeKiosk.beverages.get(0).name}")
+
+
     }
 
     @Test
@@ -128,4 +132,16 @@ class CafeKioskTest {
         assertThatThrownBy { cafeKiosk.createOrder(time) }.isInstanceOf(IllegalArgumentException::class.java)
     }
 
+    @DisplayName("")
+    @Test
+    fun Test() {
+        //given
+
+
+        //when
+
+
+        //then
+
+    }
 }

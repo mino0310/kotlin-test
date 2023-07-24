@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "3.0.9"
     id("io.spring.dependency-management") version "1.1.2"
+//    id ("org.jetbrains.kotlin.plugin.spring") version "1.9.0"
     kotlin("jvm") version "1.7.22"
     kotlin("plugin.spring") version "1.7.22"
     kotlin("plugin.jpa") version "1.7.22"
@@ -55,4 +56,14 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+allOpen {
+    annotation("javax.persistence.Entity")
+    annotation("org.springframework.web.bind.annotation.Controller")
+    annotation("java.lang.annotation.Component")
+    annotation("javax.persistence.MappedSuperclass")
+    annotation("javax.persistence.Embeddable")
+    annotation("org.springframework.data.annotation.CreatedDate")
+    annotation("org.springframework.data.annotation.LastModifiedDate")
+
 }
